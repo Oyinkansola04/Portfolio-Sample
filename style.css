@@ -55,14 +55,11 @@ header{
 }
 .social a{
   display: block;
-  color: #fefefe;
-  font-size: 1rem;
-  margin: 0 0.5rem;
+  color: purple;
+  font-size: 1.6rem;
+  margin: auto 0.5rem;
   transform: 0.2s;
-  padding:5px 10px;
   text-align: center;
-  background-color: purple;
-  border-radius: 50%;
 }
 
 .cont{
