@@ -12,14 +12,11 @@ body{
 }
 
 header{
-  background-color: inherit;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 20px 0 rgba(45, 16, 16, 0.10);
-  backdrop-filter: blur(10px);
+  background-color: #fff;
   width: 100%;
   padding: 10px 0px;
   position: fixed;
   z-index: 99;
-
 }
 .container{
   display: flex;
@@ -56,7 +53,7 @@ header{
 }
 .social a{
   display: block;
-  color: #57046c;
+  color: #03045e;
   font-size: 1.8rem;
   margin: auto 0.5rem;
   transform: 0.2s;
@@ -73,7 +70,7 @@ header{
 main{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 main .left{
   width: 55%;
@@ -82,21 +79,24 @@ main .left p{
   font-size: 1.4rem;
   margin-bottom: 10px;
   padding-left: 4px;
+  color: #03045e;
 }
 main .left h1{
   font-size: 4.6rem;
   font-weight: 1000;
   line-height: 4.4rem;
   margin-bottom: 0.8rem;
+  color: #03045e;
 }
 main .left button{
-  width: 100px;
+  width: 115px;
   margin: 15px 0 40px;
-  padding: 13px 0;
+  padding: 10px 0 18px;
   border: none;
   cursor: pointer;
-  color: #fefefe;
-  background-color: #57046c;
+  color: #474306;
+  border-radius: 6px;
+  background-color: #8f84f5;
   position: relative;
   font-size: 1rem;
   margin-left: 4px;
@@ -104,22 +104,50 @@ main .left button{
 main .left button::before{
   content: "";
   position: absolute;
-  background-color: rgb(168, 116, 168);
-  width: 100%;
-  height: 41px;
-  left: -5px;
-  top: 10px;
-  z-index: -1;
+  background-color: transparent;
+  border: 1px solid #474306;
+  border-radius: 6px;
+  width: 98%;
+  height: 43px;
+  left: -6px;
+  top: -6px;
+  z-index: 1;
 }
 main .right{
   width: 40%;
   height: 250px;
 }
 main .right .box{
-  background-color: #57046c;
+  background-color: #e3e3e3;
   width: 87%;
   height: 80%;
-  border-radius: 10px;
+  border-radius: 15px;
+  position: relative;
+}
+main .right span{
+  font-size: 20px;
+  font-weight: 900;
+  color: #56578d;
+}
+main .box .plus1{
+  position: absolute;
+  top: -3px;
+  right: 5px;
+}
+main .box .plus2{
+  position: absolute;
+  top: 12px;
+  right: 22px;
+}
+main .box .plus3{
+  position: absolute;
+  top: 25px;
+  right: 5px;
+}
+main .right p{
+  font-size: 30px;
+  font-weight: 700;
+  color: #03045e;
 }
 
 
@@ -130,7 +158,7 @@ main .right .box{
   width: 100%;
   max-width: 100%;
 }
-.info .image{
+/* .info .image{
   background-image: url(IMAGE/—Pngtree—modern\ flat\ design\ concept\ of_5332907.png.jpeg);
   background-position: center;
   background-size: cover;
@@ -141,7 +169,7 @@ main .right .box{
   top: -170px;
   right: 0px;
   z-index: -1;
-}
+} */
 
 .about{
   width: 1094px;
@@ -149,6 +177,7 @@ main .right .box{
 }
 .about h2{
   font-size: 2.3rem;
+  color: #05e6ff;
 }
 .about p{
   font-size: 1.3rem;
@@ -183,18 +212,8 @@ main .right .box{
 .bullet .box div{
   width: 0.8rem;
   height: 0.8rem;
-  background-color: #57046c;
-  position: relative;
-}
-.bullet .box div::after{
-  content: "";
-  position: absolute;
-  background-color: rgb(168, 116, 168);
-  width: 100%;
-  height: 0.8rem;
-  bottom: -2px;
-  left: -2px;
-  z-index: -1;
+  border-radius: 50%;
+  background-color: #03045e;
 }
 .bullet .write-up{
   width: 75%;
@@ -213,6 +232,7 @@ main .right .box{
 }
 .info2 .work2{
   font-size: 2.3rem;
+  color: #05e6ff;
 }
 .info2 .work-info{
   font-size: 1.3rem;
@@ -265,6 +285,7 @@ main .right .box{
 .info3 h2{
   font-size: 2.3rem;
   margin-bottom: 2rem;
+  color: #05e6ff;
 }
 .info3 .contact-div{
   display: flex;
@@ -295,27 +316,28 @@ main .right .box{
   margin-bottom: 8px;
   cursor: pointer;
   text-decoration: none;
-  color: #57046c;
+  color: #03045e;
 }
 
 
 
 
 
-@media only screen and (max-width: 1240px){
+/* @media only screen and (max-width: 1240px){
   .info .image{
     top: -70px;
     width: 50%;
     height: 400px;
     opacity: 0.3;
   } 
-}
+} */
 
 
 @media only screen and (max-width: 700px) {
   .hamburger{
     display: block;
     cursor: pointer;
+    margin-left: 35px;
   }
   .hamburger .line{
     width: 25px;
@@ -363,16 +385,22 @@ main .right .box{
   main .right .box{
     width: 100%;
   }
+  main .right .box{
+    height: 100%;
+  }
   .right .box{
     width: 100%;
   }
 
-  .info .image{
+  /* .info .image{
     top: -70px;
     width: 100%;
     height: 450px;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.3;
+  } */
+  .about{
+    margin-top: 7rem;
   }
   .about .note{
     padding: 0 0 2rem 4rem;
@@ -380,10 +408,7 @@ main .right .box{
   .bullet .write-up{
     width: 100%;
   }
-  .bullet .box{
-    width: 1rem;
-    margin-top: 5px;
-  }
+
 
   .info2 .work{
     flex-direction: column;
