@@ -349,7 +349,7 @@ main .right p{
     width: 60vw;
     /* background-color: rgba(255, 255, 255, 0.2); */
     background-color: white;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     top: 50px;
     right: 0;
