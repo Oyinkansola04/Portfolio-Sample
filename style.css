@@ -38,18 +38,16 @@ header{
 .social{
   display: flex;
 }
+.social.hidden{
+  display: none;
+}
 .navbar ul li a{
   display: block;
   color: #000;
   font-size: 1.2rem;
   padding: 10px 25px;
-  border-radius: 50px;
   margin: 0 0.5rem;
   transform: 0.2s;
-}
-.navbar ul li a:hover{
-  color: #111016;
-  background-color: #fefefe;
 }
 .social a{
   display: block;
@@ -176,7 +174,7 @@ main .right p{
   max-width: 100%;
 }
 .about h2{
-  font-size: 2.3rem;
+  font-size: 2rem;
   color: #05e6ff;
 }
 .about p{
@@ -283,7 +281,7 @@ main .right p{
   margin-bottom: 2rem;
 }
 .info3 h2{
-  font-size: 2.3rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   color: #05e6ff;
 }
@@ -348,10 +346,10 @@ main .right p{
   .navbar{
     height: 0;
     position: absolute;
-    width: 100vw;
-    background-color: #fefefe;
+    width: 60vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     top: 50px;
-    left: 0;
     right: 0;
     transition: 0.5s;
     overflow: hidden;
@@ -359,16 +357,38 @@ main .right p{
   .navbar ul{
     display: block;
     text-align: center; 
-    margin: 0 auto 0 auto;
+    margin: auto;
     width: fit-content;
+    width: 100%;
     opacity: 0;
     z-index: 2;
   }
+  .navbar ul li{
+    margin-top: 10px;
+  }
+  .navbar ul li a{
+    padding: 15px 25px;
+    margin: 0;
+    width: 100%;
+  }
+  .navbar ul li a:hover{
+    background-color: #f1f1f1;
+  }
   .navbar.active{
-    height: 135px;
+    height: 320px;
   }
   .navbar.active ul{
     opacity: 1;
+  }
+  .social{
+    display: none;
+  }
+  .social.hidden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 18px;
   }
 
   .cont{
@@ -429,6 +449,12 @@ main .right p{
   }
   .info3 .contact-info{
     width: 100%;
+  }
+  .about p,
+  .bullet .write-up,
+  .info2 .work-info,
+  .contact-info span{
+    text-align: left;
   }
 }
 
