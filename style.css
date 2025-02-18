@@ -1,14 +1,8 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-}
-
-body{
-  background-color: #fefefe;
+  font-family: sans-serif;
 }
 
 header{
@@ -26,9 +20,75 @@ header{
   max-width: 90%;
   margin:  auto;
 }
-.hamburger{
+
+#hamburger{
   display: none;
+  cursor: pointer;
 }
+#hamburger .line{
+  width: 35px;
+  height: 3px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.open .bar1{
+  -webkit-transform: rotate(-45deg) translate(-6px,6px);
+  transform: rotate(-45deg) translate(-6px,6px);
+}
+.open .bar2{
+  opacity: 0;
+}
+.open .bar3{
+  -webkit-transform: rotate(45deg) translate(-6px,-8px);
+  transform: rotate(45deg) translate(-6px,-8px);
+}
+.open .mobile-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  z-index: -1;
+}
+.mobile-menu{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: calc(100vh - 250px);
+  width: 50%;
+  padding-top: 60px;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+}
+.mobile-menu ul{
+  width: 100%;
+}
+.mobile-menu ul li{
+  list-style: none;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.mobile-menu ul li a{
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 20px;
+  display: block;
+}
+.mobile-menu ul li a:hover{
+  background-color: #f1f1f1;
+}
+.mobile-menu .social2{
+  display: flex;
+  flex-direction: row;
+  font-size: 1.8rem;
+  gap: 20px;
+}
+
+
 .logo{
   font-size: 1.6rem;
   font-weight: 700;
@@ -37,14 +97,13 @@ header{
 .navbar ul,
 .social{
   display: flex;
-}
-.social.hidden{
-  display: none;
+  list-style: none;
 }
 .navbar ul li a{
   display: block;
   color: #000;
   font-size: 1.2rem;
+  text-decoration: none;
   padding: 10px 25px;
   margin: 0 0.5rem;
   transform: 0.2s;
@@ -57,6 +116,12 @@ header{
   transform: 0.2s;
   text-align: center;
 }
+
+
+
+
+
+
 
 .cont{
   width: 1100px;
@@ -73,11 +138,15 @@ main{
 main .left{
   width: 55%;
 }
+main .left p.one{
+  animation-delay: 0.5s;
+}
 main .left p{
   font-size: 1.4rem;
   margin-bottom: 10px;
   padding-left: 4px;
   color: #03045e;
+  animation-delay: 1.5s;
 }
 main .left h1{
   font-size: 4.6rem;
@@ -85,6 +154,7 @@ main .left h1{
   line-height: 4.4rem;
   margin-bottom: 0.8rem;
   color: #03045e;
+  animation-delay: 1s;
 }
 main .left button{
   width: 115px;
@@ -98,6 +168,7 @@ main .left button{
   position: relative;
   font-size: 1rem;
   margin-left: 4px;
+  animation-delay: 1.5s;
 }
 main .left button::before{
   content: "";
@@ -114,6 +185,7 @@ main .left button::before{
 main .right{
   width: 40%;
   height: 250px;
+  animation-delay: 2s;
 }
 main .right .box{
   background-color: #e3e3e3;
@@ -317,81 +389,31 @@ main .right p{
   color: #03045e;
 }
 
+.anime{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
 
-
-
-
-/* @media only screen and (max-width: 1240px){
-  .info .image{
-    top: -70px;
-    width: 50%;
-    height: 400px;
-    opacity: 0.3;
-  } 
-} */
-
-
-@media only screen and (max-width: 700px) {
-  .hamburger{
-    display: block;
-    cursor: pointer;
-    margin-left: 35px;
-  }
-  .hamburger .line{
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    margin: 5px 0;
-  }
-  .navbar{
-    height: 0;
-    position: absolute;
-    width: 60vw;
-    /* background-color: rgba(255, 255, 255, 0.2); */
-    background-color: white;
-    /* backdrop-filter: blur(10px); */
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    top: 50px;
-    right: 0;
-    transition: 0.5s;
-    overflow: hidden;
-  }
-  .navbar ul{
-    display: block;
-    text-align: center; 
-    margin: auto;
-    width: fit-content;
-    width: 100%;
-    opacity: 0;
-    z-index: 2;
-  }
-  .navbar ul li{
-    margin-top: 10px;
-  }
-  .navbar ul li a{
-    padding: 15px 25px;
-    margin: 0;
-    width: 100%;
-  }
-  .navbar ul li a:hover{
-    background-color: #f1f1f1;
-  }
-  .navbar.active{
-    height: 320px;
-  }
-  .navbar.active ul{
+@keyframes moveup{
+  100%{
     opacity: 1;
+    transform: translateY(0px);
   }
+}
+
+
+
+@media only screen and (max-width: 820px){
+  .navbar,
   .social{
     display: none;
   }
-  .social.hidden{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    gap: 18px;
+  #hamburger{
+    display: block;
   }
+
+
 
   .cont{
     padding-top: 120px;
@@ -459,5 +481,5 @@ main .right p{
   .contact-info span{
     text-align: left;
   }
-}
 
+}

@@ -12,10 +12,23 @@
   <header>
     <div class="container">
       <div class="logo">Uxpedroc</div>
-      <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      <div id="hamburger" onclick="toggleMobileMenu(this)">
+        <div class="line bar1"></div>
+        <div class="line bar2"></div>
+        <div class="line bar3"></div>
+        <div class="mobile-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="social2">
+            <div class="twitter"><a href="#"><i class='bx bxl-facebook-circle'></i></a></div>
+            <div class="instagram"><a href="#"><i class='bx bxl-behance'></i></a></div>
+            <div class="facebook"><a href="#"><i class='bx bxl-twitter'></i></a></div>
+          </div>
+        </div>
       </div>
       <nav class="navbar">
         <ul>
@@ -24,11 +37,6 @@
           <li><a href="#">Work</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <div class="social hidden">
-          <div class="twitter"><a href="#"><i class='bx bxl-facebook-circle'></i></a></div>
-          <div class="instagram"><a href="#"><i class='bx bxl-behance'></i></a></div>
-          <div class="facebook"><a href="#"><i class='bx bxl-twitter'></i></a></div>
-        </div>
       </nav>
       <div class="social">
         <div class="twitter"><a href="#"><i class='bx bxl-facebook-circle'></i></a></div>
@@ -39,15 +47,16 @@
   </header>
 
 
+
   <div class="cont">
     <main>
       <div class="left">
-        <p>Hello, I'm Pedro,</p>
-        <h1>Product<br>Designer</h1>
-        <p>based in Nigeria</p>
-        <button>Resume</button>
+        <p class="anime one">Hello, I'm Pedro,</p>
+        <h1 class="anime">Product<br>Designer</h1>
+        <p class="anime">based in Nigeria</p>
+        <button class="anime">Resume</button>
       </div>
-      <div class="right">
+      <div class="right anime">
         <div class="box">
           <span class="plus1">➕</span>
           <span class="plus2">➕</span>
@@ -138,13 +147,11 @@
 
   </div>
 
-
-<script>
-  const hamburger = document.querySelector(".hamburger");
-  hamburger.addEventListener("click", () => {
-    const navbar = document.querySelector(".navbar");
-    navbar.classList.toggle("active");
-  })
-</script>
+  
+  <script>
+    function toggleMobileMenu(menu){
+      menu.classList.toggle('open')
+    }
+  </script>
 </body>
 </html>
