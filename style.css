@@ -406,7 +406,11 @@ main .right p{
   }
 }
 
-
+@media only screen and (max-width: 430px){
+  .mobile-menu{
+    width: 100%;
+  }
+}
 
 @media only screen and (max-width: 820px){
   .navbar,
