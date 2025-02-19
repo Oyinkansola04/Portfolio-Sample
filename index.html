@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>Document</title>
 </head>
 <body>
@@ -71,11 +73,11 @@
     
     <div class="info">
       <div class="image"></div>
-      <div class="about">
+      <div class="about" data-aos="fade-up">
         <h2>About.</h2>
         <p>Passionate UI/UX designer exploring creativity and functionality. Designing experiences that connect, inspire and simplify. Always learning, always evolving</p>
   
-        <div class="note">
+        <div class="note" data-aos="fade-up">
           <h3>Octave Analytics</h3>
           <div class="bullet">
             <div class="box">
@@ -87,7 +89,7 @@
           </div>
         </div>
   
-        <div class="note">
+        <div class="note" data-aos="fade-up">
           <h3>The Good Shepherd Pasture</h3>
           <div class="bullet">
             <div class="box">
@@ -104,27 +106,27 @@
 
     <!------------------ INTRO PART 2 -------------------->
     <div class="info2">
-      <h2 class="work2">My Work.</h2>
-      <p class="work-info">
+      <h2 class="work2" data-aos="fade-up">My Work.</h2>
+      <p class="work-info" data-aos="fade-up">
         As a passionate UX designer, I've had the privilege of working on a diverse range of projects that have allowed me to hone my craft and create intuitive, user-centered experience. From designing mobile apps for startups to revamping the information architecture of enterprise-level websites, my portfolio showcases my versatility and adaptability in tackling various design challenges  
       </p>
       <div class="work">
         <div class="left">
-          <div class="box"></div>
-          <div class="box-intro">
+          <div class="box" data-aos="fade-up"></div>
+          <div class="box-intro" data-aos="fade-up">
             <span>November 13, 2024</span>
             <h2>Octave Analytics Case Study</h2>
             <p><b>Project Overview: Octave Analytics Website Redesign</b><br>This web design project centers on crafting a sleek, data-driven platform for Octave Analytics, a cutting-edge data analytics firm. The design merges professional minimalism with dynamic interactivity, featuring a clean layout, crisp typography, and strategic use of gradients in OCTAVE's brand colors (deep blues and tech-inspired accents) to convey innovation and trust. Key elements include :<br>- Interactive Data Visualizations: Live charts, graphs, and dashboards to showcase analytics capabilities.<br>- Case Study Portfolios: Filterable project galleries demonstrating OCTAVE's expertise.<br>- Responsive Performance: Fast-loading pages optimised for seamless use across devices.<br>- Client Portal Integration: Secure login for real-time reporting and collaboration.</p>
-            <p>The site balances technical sophistication with approachable UX, guiding visitors from problem-solving insights to actionable results. A focus on SSL security and SEO ensures the platform not only reflects OCTAVE's authority in analytics but also drives lead generation and client engagement.</p>
+            <p data-aos="fade-up">The site balances technical sophistication with approachable UX, guiding visitors from problem-solving insights to actionable results. A focus on SSL security and SEO ensures the platform not only reflects OCTAVE's authority in analytics but also drives lead generation and client engagement.</p>
           </div>
         </div>
         <div class="right">
-          <div class="box"></div>
-          <div class="box-intro">
+          <div class="box" data-aos="fade-up"></div>
+          <div class="box-intro" data-aos="fade-up">
             <span>January 24, 2025</span>
             <h2>Rccgtgsp Case Study</h2>
             <p><b>RCCG TGSP CHURCH WEBSITE DESIGN</b><br>This project focuses on creating an inviting, spiritually uplifting digital hub for RCCG The Glorious Sanctuary Parish. The design blends serene aesthetics with functional clarity, using warm tones (creams, soft blues, and gold accents) to evoke peace and community. Key features include live streaming integration for worship services and events, an event and volunteer portal with calendar sync and registration forms, a searchable sermon library with audio/video archives, and mobile-first responsiveness for accessibility across devices. </p>
-            <p>The site prioritizes intuitive navigation to connect visitors with spiritual resources, donation portals, and pastoral care, while ADA compliance and SEO optimization ensure inclusivity and expanded outreach.</p>
+            <p data-aos="fade-up">The site prioritizes intuitive navigation to connect visitors with spiritual resources, donation portals, and pastoral care, while ADA compliance and SEO optimization ensure inclusivity and expanded outreach.</p>
           </div>
         </div>
       </div>
@@ -133,10 +135,10 @@
 
     <!----------------------- CONTACT PART ------------------------->
     <div class="info3">
-      <h2>Contact.</h2>
+      <h2 data-aos="fade-up">Contact.</h2>
       <div class="contact-div">
-        <div class="image"></div>
-        <div class="contact-info">
+        <div class="image" data-aos="fade-up"></div>
+        <div class="contact-info" data-aos="fade-up">
           <span>I'm always eager to explore new opportunities and collaborate with like-minded individuals and organizations. If you'd like to discuss a potential project , bounce around ideas, or simply connect , feel free to reach out to me through any  of the following channels.</span>
           <a href="#">adewaleped@gmail.com</a>
           <a href="#">twitter.com/Uxpedroc</a>
@@ -147,7 +149,14 @@
 
   </div>
 
-  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 1000,
+    });
+  </script>
+
   <script>
     function toggleMobileMenu(menu){
       menu.classList.toggle('open')
