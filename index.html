@@ -18,18 +18,20 @@
         <div class="line bar1"></div>
         <div class="line bar2"></div>
         <div class="line bar3"></div>
-        <div class="mobile-menu">
+      </div>
+      <div class="mobile-menu">
+        <nav class="navbar2">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Work</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-          <div class="social2">
-            <div class="twitter"><a href="#"><i class='bx bxl-facebook-circle'></i></a></div>
-            <div class="instagram"><a href="#"><i class='bx bxl-behance'></i></a></div>
-            <div class="facebook"><a href="#"><i class='bx bxl-twitter'></i></a></div>
-          </div>
+        </nav>
+        <div class="social2">
+          <div class="twitter"><a href="#"><i class='bx bxl-facebook-circle'></i></a></div>
+          <div class="instagram"><a href="#"><i class='bx bxl-behance'></i></a></div>
+          <div class="facebook"><a href="#"><i class='bx bxl-twitter'></i></a></div>
         </div>
       </div>
       <nav class="navbar">
@@ -58,11 +60,11 @@
         <p class="anime">based in Nigeria</p>
         <button class="anime">Resume</button>
       </div>
-      <div class="right anime">
+      <div class="right anime2">
         <div class="box">
-          <span class="plus1">➕</span>
-          <span class="plus2">➕</span>
-          <span class="plus3">➕</span>
+          <span class="plus1">&#10133;</span>
+          <span class="plus2">&#10133;</span>
+          <span class="plus3">&#10133;</span>
         </div>
         <p>/ / / / /</p>
       </div>
@@ -157,10 +159,21 @@
     });
   </script>
 
-  <script>
-    function toggleMobileMenu(menu){
-      menu.classList.toggle('open')
+<script>
+  const mobile = document.querySelector(".mobile-menu")
+  function toggleMobileMenu(event){
+    event.classList.toggle('open');
+    if (!mobile.classList.contains("show")){
+      mobile.classList.add("show");
+    }else if(mobile.classList.contains("show")){
+      mobile.classList.remove("hide");
+      mobile.classList.replace("show", "hide");
+    }else{
+      mobile.classList.remove("hide");
+      mobile.classList.remove("show");
+      mobile.style.opaci
     }
-  </script>
+  }
+</script>
 </body>
 </html>

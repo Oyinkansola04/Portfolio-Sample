@@ -23,10 +23,10 @@ header{
   max-width: 90%;
   margin:  auto;
 }
-
-#hamburger{
-  display: none;
-  cursor: pointer;
+.logo{
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000;
 }
 #hamburger .line{
   width: 30px;
@@ -34,6 +34,10 @@ header{
   background-color: #000;
   margin: 6px 0;
   transition: 0.4s;
+}
+#hamburger{
+  cursor: pointer;
+  display: none;
 }
 .open .bar1{
   -webkit-transform: rotate(-45deg) translate(-6px,6px);
@@ -46,64 +50,89 @@ header{
   -webkit-transform: rotate(45deg) translate(-6px,-8px);
   transform: rotate(45deg) translate(-6px,-8px);
 }
-.open .mobile-menu{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: #fff;
-  z-index: -1;
-}
 .mobile-menu{
   display: none;
+  opacity: 0;
   position: absolute;
   top: 0;
   right: 0;
+  background-color: #fff;
+  z-index: -1;
   width: 50%;
   padding-top: 60px;
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
-.mobile-menu ul{
+.mobile-menu .navbar2{
   width: 100%;
 }
-.mobile-menu ul li{
+.mobile-menu .navbar2 ul{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.mobile-menu .navbar2 ul li{
   list-style: none;
   margin-bottom: 20px;
   width: 100%;
   text-align: center;
 }
-.mobile-menu ul li a{
+.mobile-menu .navbar2 ul li a{
+  padding: 20px 0px;
+  display: block;
   color: #000;
   text-decoration: none;
   font-size: 1.2rem;
   width: 100%;
-  padding: 20px;
-  display: block;
 }
-.mobile-menu ul li a:hover{
+.mobile-menu .navbar2 ul li a:hover{
   background-color: #f1f1f1;
 }
 .mobile-menu .social2{
   display: flex;
   flex-direction: row;
+  justify-content: center;
   font-size: 1.8rem;
   gap: 20px;
   margin-bottom: 30px;
   color: #03045e;
 }
 .mobile-menu .social2 a{
+  display: block;
   color: #03045e;
 }
-
-
-.logo{
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #000;
+.mobile-menu.hide{
+  animation: slideup 0.5s ease-out forwards;
 }
-.navbar ul,
-.social{
+.mobile-menu.show{
+  animation: slidedown 0.5s ease-out forwards;
+}
+
+@keyframes slidedown {
+  0%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideup {
+  0%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+.navbar ul{
   display: flex;
+  flex-direction: row;
+}
+.navbar ul li{
   list-style: none;
 }
 .navbar ul li a{
@@ -114,6 +143,10 @@ header{
   padding: 10px 25px;
   margin: 0 0.5rem;
   transform: 0.2s;
+}
+.social{
+  display: flex;
+  flex-direction: row;
 }
 .social a{
   display: block;
@@ -412,12 +445,30 @@ main .right p{
   }
 }
 
+.anime2{
+  opacity: 0;
+  animation: side 0.5s linear forwards;
+}
+@keyframes side{
+  0%{
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+
+
+
 @media only screen and (max-width: 430px){
   .mobile-menu{
     width: 100%;
   }
 }
-
 @media only screen and (max-width: 820px){
   .navbar,
   .social{
@@ -426,7 +477,11 @@ main .right p{
   #hamburger{
     display: block;
   }
-
+  .mobile-menu{
+    display: block;
+    opacity: 0;
+    outline: none;
+  }
 
 
   .cont{
