@@ -149,6 +149,11 @@
       </div>
     </div>
 
+
+    <button id="darklight">
+      <i class="fa-solid fa-moon"></i>
+      <i class='bx bxs-sun'></i>
+    </button>
   </div>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -171,8 +176,29 @@
     }else{
       mobile.classList.remove("hide");
       mobile.classList.remove("show");
-      mobile.style.opaci
     }
+  }
+
+  let darkLight = document.getElementById("darklight");
+  let darkMode = localStorage.getItem("darkmode")
+
+  const enableDarkMode = () =>{
+    document.body.classList.add("darkmode");
+    localStorage.setItem("darkmode", "active");
+  }
+
+  const disableDarkMode = () =>{
+    document.body.classList.remove("darkmode");
+    localStorage.removeItem("darkmode");
+  }
+
+  if (darkMode === "active") enableDarkMode();
+
+  if (darkLight) {
+    darkLight.addEventListener("click", () => {
+      darkMode = localStorage.getItem("darkmode");
+      darkMode !== "active" ? enableDarkMode() : disableDarkMode();
+    });
   }
 </script>
 </body>
